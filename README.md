@@ -35,293 +35,59 @@
 - ### **No Additional Frameworks 🤘** 
 - ### **No Additional Libraries 🙌** 
 - ### **Multi Page 💎** 
-- ### **Fully Responsive 🚀** 
-- ### **Super Fast and Optimized for SEO ⚡** 
-- ### **Great Audits Score 🎖️** 
+# Anuj Bhattarai — Personal Portfolio
 
-<img src="https://i.ibb.co/1dD8Mky/Screenshot-from-2021-08-28-14-38-30.png" alt="Dopefolio Audits" width="100%" />
+This repository contains the static portfolio website for Anuj Bhattarai. It is a lightweight, responsive HTML/CSS/JS site showcasing projects, experience, education, achievements, and contact information.
 
-<br/>
-<br/>
+## Live preview
+If you host this repository (for example using GitHub Pages), the site will be available at your GitHub Pages URL.
 
-## Test the template with different colors on the playground link 🚀
+## Structure
+- `index.html` — Home page (Hero, About, Experience, Projects, Achievements, Contact)
+- `project-1.html`, `project-2.html`, `project-3.html` — Case study pages (examples)
+- `css/style.css` — Main stylesheet
+- `index.js` — Small UI scripts (menu toggle, optional carousel)
+- `assets/` — Images and icons used by the site
+- `sass/` — SASS source files (if you prefer to recompile styles locally)
 
-## [Playground Link](https://dopefolio-playground.netlify.app) 🔗
+## Quick local run
+1. Clone the repo (if you haven't already):
 
-<div align="center">
-  <img src="https://i.postimg.cc/xjsqN9GG/ezgif-com-gif-maker-2.gif" alt="Dopefolio Playground" width="100%" />
-  <br>
-</div>
+```bash
+git clone https://github.com/akin-bh/portfolio-website.git
+cd portfolio-website
+```
 
-<br/>
+2. Open `index.html` in your browser or use a simple local server. Example with Python 3:
 
-----
+```bash
+# from the repository root
+python3 -m http.server 8000
+# then open http://localhost:8000 in your browser
+```
 
-<br/>
+3. If you use the SASS source (optional), install Node dependencies and compile:
 
-## Technologies used 🛠️
+```bash
+npm install
+npm run compile:scss
+```
 
-- **HTML** 🚀
-- **CSS** 🚀
-- **JavaScript** 🚀
-- **SASS** 🚀
+## Making edits
+- Update content directly in `index.html` for text changes.
+- Replace images in `assets/` (use the same filename or update the `src`).
+- CSS changes: edit `css/style.css` or modify SASS files in `sass/` and recompile.
+
+## Deployment
+You can publish this site using GitHub Pages or any static site host (Netlify, Vercel, etc.). For GitHub Pages, enable pages from the `main` branch in the repository settings.
+
+## Contact
+- Email: (add your email here)
+- LinkedIn: (add your LinkedIn URL)
 
 ---
 
-<br/>
-
-## How To Use 🔧
-
-From your command line, first clone Dopefolio:
-
-```bash
-# Clone this repository
-$ git clone https://github.com/rammcodes/dopefolio
-
-# Go into the repository
-$ cd dopefolio
-
-# Remove current origin repository
-$ git remote remove origin
-```
-
-<br/>
-
-Then you can install the dependencies
-
-Using NPM:
-
-```bash
-# Install dependencies
-$ npm install
-
-# Listen to changes in CSS Preprocessor files ( SASS files )
-$ npm run compile:scss
-```
-
-Once you run `npm run compile:scss`, then open the `index.html` inside your favorite browser or using the live server extension.
-
-<br>
-
----
-
-<br>
-
-## Template Instructions:
-
-## Step 1 - STYLES
-
-Make sure you have started the SASS to CSS compilation by running
-
-```bash
-$ npm run compile:scss
-```
-
-Change the color theme of the website.
-
-Go to `sass/abstracts/_variables.scss` and change the value of this sass variable called `$themeClrPrimary` to your preferred HEX color.
-
-```scss
-// Default value
-$themeClrPrimary: #0062b9;
-```
-
-**NOTE**: I highly recommend to checkout the [Dopefolio Playground Link](https://dopefolio-playground.netlify.app) to test the template with different colors and see which color do you like the most.
-
-<br/>
-
----
-
-<br/>
-
-## Step 2 - Homepage
-
-Go to `/index.html` and fill your information, there are 6 sections:
-
-### Header of Homepage
-
-- On `.header__logo-img`, Add your own Image, Better if the background of the image is transparent so the background can match the theme color. To remove the background of your image, you can visit remove.bg where you can upload your image and it will remove the background of it.
-- On `.header__logo-sub`, Add your own Name.
-
-```html
-<!-- **** Header of Homepage **** -->
-<header class="header">
-  <div class="header__content">
-    <div class="header__logo-container">
-      <div class="header__logo-img-cont">
-        <img
-          src="./assets/png/akin-bh.png"
-          alt="Anuj Bhattarai Logo Image"
-          class="header__logo-img"
-        />
-      </div>
-  <span class="header__logo-sub">Anuj Bhattarai</span>
-    </div>
-    <div class="header__main">
-      <ul class="header__links">
-        <li class="header__link-wrapper">
-          <a href="./" class="header__link"> Home </a>
-        </li>
-        <li class="header__link-wrapper">
-          <a href="./#about" class="header__link">About </a>
-        </li>
-        <li class="header__link-wrapper">
-          <a href="./#projects" class="header__link"> Projects </a>
-        </li>
-        <li class="header__link-wrapper">
-          <a href="./#contact" class="header__link"> Contact </a>
-        </li>
-      </ul>
-      <div class="header__main-ham-menu-cont">
-        <img
-          src="./assets/svg/ham-menu.svg"
-          alt="hamburger menu"
-          class="header__main-ham-menu"
-        />
-      </div>
-    </div>
-  </div>
-  <div class="header__sm-menu">
-    <div class="header__sm-menu-content">
-      <ul class="header__sm-menu-links">
-        <li class="header__sm-menu-link">
-          <a href="./"> Home </a>
-        </li>
-
-        <li class="header__sm-menu-link">
-          <a href="./#about"> About </a>
-        </li>
-
-        <li class="header__sm-menu-link">
-          <a href="./#projects"> Projects </a>
-        </li>
-
-        <li class="header__sm-menu-link">
-          <a href="./#contact"> Contact </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</header>
-<!-- END Header -->
-```
-
-### Hero Section of Homepage
-
-- On `.heading-primary`, put your custom title.
-- On `.text-primary`, put a short description about yourself.
-- On `.home-hero__social-icon-link`, fill the href attribute with a link related to your social media account.
-
-```html
-<!-- **** Hero Section of Homepage **** -->
-<section class="home-hero">
-  <div class="home-hero__content">
-  <h1 class="heading-primary">Hey, My name is Anuj Bhattarai</h1>
-    <div class="home-hero__info">
-      <p class="text-primary">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-        tempora explicabo quae quod deserunt eius sapiente solutions for complex
-        problems
-      </p>
-    </div>
-    <div class="home-hero__cta">
-      <a href="./#projects" class="btn btn--bg">Projects</a>
-    </div>
-  </div>
-  <div class="home-hero__socials">
-    <div class="home-hero__social">
-      <a href="#" class="home-hero__social-icon-link">
-        <img
-          src="./assets/png/linkedin-ico.png"
-          alt="icon"
-          class="home-hero__social-icon"
-        />
-      </a>
-    </div>
-    <div class="home-hero__social">
-      <a href="#" class="home-hero__social-icon-link">
-        <img
-          src="./assets/png/github-ico.png"
-          alt="icon"
-          class="home-hero__social-icon"
-        />
-      </a>
-    </div>
-    <div class="home-hero__social">
-      <a href="#" class="home-hero__social-icon-link">
-        <img
-          src="./assets/png/twitter-ico.png"
-          alt="icon"
-          class="home-hero__social-icon"
-        />
-      </a>
-    </div>
-    <div class="home-hero__social">
-      <a href="#" class="home-hero__social-icon-link">
-        <img
-          src="./assets/png/yt-ico.png"
-          alt="icon"
-          class="home-hero__social-icon"
-        />
-      </a>
-    </div>
-    <div class="home-hero__social">
-      <a
-        href="#"
-        class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-      >
-        <img
-          src="./assets/png/insta-ico.png"
-          alt="icon"
-          class="home-hero__social-icon"
-        />
-      </a>
-    </div>
-  </div>
-  <div class="home-hero__mouse-scroll-cont">
-    <div class="mouse"></div>
-  </div>
-</section>
-<!-- /END Hero Section -->
-```
-
-### About Section
-
-- On `.heading-sec__sub`, put a short description about the section.
-- On `.about__content-details-para`, put your details here and use `<strong></strong>` tag to highlight specific keywords.
-- On `.skills__skill`, mention your skill one by one.
-
-```html
-<!-- **** About Section of Homepage **** -->
-<section id="about" class="about sec-pad">
-  <div class="main-container">
-    <h2 class="heading heading-sec heading-sec__mb-med">
-      <span class="heading-sec__main">About Me</span>
-      <span class="heading-sec__sub">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-        tempora explicabo quae quod deserunt eius sapiente
-      </span>
-    </h2>
-    <div class="about__content">
-      <div class="about__content-main">
-        <h3 class="about__content-title">Get to know me!</h3>
-        <div class="about__content-details">
-          <p class="about__content-details-para">
-            Hey! I'm
-            <strong>Anuj Bhattarai</strong>
-            and I'm a <strong> Frontend Web Developer </strong>. I've done
-            <strong> remote </strong>
-            projects for agencies, consulted for startups, and collaborated with
-            talented people to create
-            <strong>digital products </strong>
-            for both business and consumer use.
-          </p>
-          <p class="about__content-details-para">
-            I'm a bit of a digital product junky. Over the years, I've used
-            hundreds of web and mobile apps in different industries and
-            verticals. Feel free to
-            <strong>contact</strong> me here.
-          </p>
+If you'd like a different README format (badges, screenshots, or a longer bio), tell me what to include and I'll update it.
         </div>
         <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
           >Contact</a
