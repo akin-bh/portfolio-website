@@ -1,8 +1,7 @@
- # Dopefolio 🔥
 
-## Portfolio (customized for Anuj Bhattarai)
+## Portfolio 
 
-## [Demo Link](https://dopefolio.netlify.app) 🔗
+
 
 <div align="center">
   <img src="https://i.postimg.cc/CxZXqhWM/ezgif-com-video-to-gif-1.gif" alt="Dopefolio Demo" width="100%" />
@@ -16,17 +15,7 @@
 
 <br/>
 
-## ( Update ): Project Achievement 🏆 
 
-**Dopefolio** has been listed as the **Hottest Frontend Tool of 2021** According to **CSS Tricks** 🥳. Thanks to all of you for supporting this project 🙌
-
-**[Link to the CSS tricks article on Dopefolio](https://css-tricks.com/hottest-front-end-tools-in-2021/#aa-58-dopefolio)**   
-
-<br/>
-
-----
-
-<br/>
 
 ## Features
 
