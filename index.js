@@ -53,9 +53,11 @@ headerLogoConatiner.addEventListener('click', () => {
 
   function goTo(index) {
     currentIndex = (index + slideCount) % slideCount
-    const slideWidth = slides[0].getBoundingClientRect().width + 12 // include gap
-    const offset = currentIndex * slideWidth
-    track.style.transform = `translateX(-${offset}px)`
+    // compute exact offset using the slide's offsetLeft (accounts for gap and responsive widths)
+    const targetSlide = slides[currentIndex]
+    const offset = targetSlide.offsetLeft
+    // apply transform using GPU-accelerated translate3d for smoother animations
+    track.style.transform = `translate3d(-${offset}px, 0, 0)`
   }
 
   function next() { goTo(currentIndex + 1) }
@@ -82,6 +84,10 @@ headerLogoConatiner.addEventListener('click', () => {
     goTo(0)
     startTimer()
     // reflow on resize
-    window.addEventListener('resize', () => { goTo(currentIndex) })
+    window.addEventListener('resize', () => { 
+      // small debounce to avoid jank on resize
+      clearTimeout(window._carouselResizeTimeout)
+      window._carouselResizeTimeout = setTimeout(() => { goTo(currentIndex) }, 120)
+    })
   })
 })()

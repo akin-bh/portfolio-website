@@ -416,6 +416,9 @@ textarea {
   display: flex;
   gap: 1.2rem;
   transition: transform 0.6s cubic-bezier(.22,.9,.39,1);
+  /* hint browser to use GPU and avoid jank */
+  will-change: transform;
+  transform: translateZ(0);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -446,6 +449,7 @@ textarea {
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   font-size: 2.4rem;
   line-height: 1;
+  z-index: 80; /* make sure navs sit above social pills */
 }
 .carousel__nav--prev { left: -22px; }
 .carousel__nav--next { right: -22px; }
