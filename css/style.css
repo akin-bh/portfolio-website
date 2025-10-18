@@ -271,13 +271,11 @@ textarea {
     position: relative;
     overflow: visible;
   }
+  /* Remove hover transform/gradient/filter effects per user request */
   .home-hero__social-icon-link:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 36px rgba(12,24,48,0.12);
-    background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
-  }
-  .home-hero__social-icon-link:hover img {
-    filter: brightness(0) invert(1);
+    /* no transform, no filter, remain visually neutral */
+    box-shadow: 0 10px 24px rgba(12,24,48,0.06);
+    background: linear-gradient(180deg,#ffffff,#f4f6fb);
   }
   .home-hero__social-icon {
     width: 22px;
@@ -300,15 +298,11 @@ textarea {
   .home-hero__social + .home-hero__social {
     margin-top: 6px; /* extra spacing between icons */
   }
-  .home-hero__social-icon-link:hover {
-    transform: translateX(4px);
-  }
+  /* disable all positional/icon hover effects */
   .home-hero__social-icon-link:active {
-    transform: translateX(2px) scale(0.99);
-  }
-  .home-hero__social-icon-link:hover .home-hero__social-icon {
-    transform: translateY(-2px) scale(1.02);
-    filter: invert(1) brightness(2) drop-shadow(0 6px 14px rgba(0,0,0,0.08));
+    /* keep basic active feedback but no positional shift */
+    transform: none;
+    opacity: 0.96;
   }
   .home-hero__content {
     position: absolute;
